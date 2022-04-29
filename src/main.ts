@@ -37,7 +37,7 @@ async function bootstrap(): Promise<void> {
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
-  await writeFile('documentation.json', JSON.stringify(document, null, 2));
+  await writeFile('docs/swagger.json', JSON.stringify(document, null, 2));
 
   await app.listen(3000);
 }
